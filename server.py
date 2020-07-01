@@ -1,4 +1,4 @@
-from flask import Flask, request, json
+from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import math
 
@@ -7,7 +7,8 @@ CORS(app)
 
 @app.route('/', methods=["GET"])
 def start():
-    return 'flask is running'
+    return "<h1>Flask is running </h1>"
+    # return jsonify('flask is running')
    
 @app.route('/api/results', methods=["POST"])
 def results():
